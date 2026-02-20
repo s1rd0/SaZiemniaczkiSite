@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+<header>
+    <h1>Gallery</h1>
+</header>
+
+<div class="layout">
+
+<div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="introduction.html">Introduction</a>
+    <a href="dog.html">The Dog</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="resources.html">Resources</a>
+</div>
+
+<div class="content">
+
+    <div class="gallery-layout">
+
+        <div class="gallery-section">
+            <h2>Gallery</h2>
+
+            <div class="gallery-grid">
+                <img src="images/img1.jpg" class="gallery-img">
+                <img src="images/img2.jpg" class="gallery-img">
+                <img src="images/img3.jpg" class="gallery-img">
+            </div>
+        </div>
+
+    <div class="player-section">
+                
+        <div class="music-player">
+
+    <div class="cd-container">
+        <img src="images/cd.png" class="cd" id="cdDisc">
+    </div>
+
+    <div class="track-info">
+        <div id="trackTitle">Track name</div>
+        <div class="time">
+            <span id="currentTime">0:00</span> /
+            <span id="duration">0:00</span>
+        </div>
+    </div>
+
+    <input type="range" id="progressBar" value="0" min="0" max="100">
+
+    <div class="controls">
+        <button id="prevBtn">Prev</button>
+        <button id="playBtn">Play</button>
+        <button id="nextBtn">Next</button>
+    </div>
+
+    <ul id="playlist" class="playlist"></ul>
+
+    <audio id="audioPlayer"></audio>
+
+    </div>
+
+</div>
+
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
