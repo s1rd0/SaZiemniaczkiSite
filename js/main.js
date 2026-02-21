@@ -83,17 +83,41 @@ const trackTitle = document.getElementById("trackTitle");
 if (audio) {
 
     const tracks = [
-    {
-        title: "Still Alive - Portal",
-        src: "audio/portal-still-alive.mp3"
-    },
-    {
-        title: "Sweden - Minecraft",
-        src: "audio/minecraft-sweden.mp3"
-    },
-    {
+        {
         title: "Megalovania - Undertale",
-        src: "audio/undertale-megalovania.mp3"
+        src: "audio/music/undertale-megalovania.mp3"
+    },
+    {
+        title: "Portal - Still Alive",
+        src: "audio/music/portal-still-alive.mp3"
+    },
+    {
+        title: "C418 - Sweden",
+        src: "audio/music/minecraft-sweden.mp3"
+    },
+    {
+        title: "C418 - Subwoofer Lullaby",
+        src: "audio/music/minecraft-subwoofer.mp3"
+    },
+    {
+        title: "C418 - Minecraft",
+        src: "audio/music/minecraft-minecraft.mp3"
+    },
+    {
+        title: "C418 - Living Mice",
+        src: "audio/music/minecraft-livingmice.mp3"
+    },
+    {
+        title: "C418 - Haggstorm",
+        src: "audio/music/minecraft-haggstorm.mp3"
+    },
+    {
+        title: "C418 - Aria Math",
+        src: "audio/music/minecraft-ariamath.mp3"
+    },
+    {
+        title: "C418 - Moog City 2",
+        src: "audio/music/minecraft-moogcity2.mp3"
     }
 ];
 
