@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+
+<div class="container">
+    <header><h1>Reviews</h1></header>
+
+    <div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <a href="../index.html">Home</a>
+        <a href="../introduction.html">Introduction</a>
+        <a href="../dog.html">My Dog</a>
+        <a href="../gallery.html">Gallery</a>
+
+        <div class="blog-wrapper">
+        <a href="#" class="blog-toggle">Blog</a>
+
+        <div class="blog-sub">
+            <a href="../blog-categories/reviews.html" class="active">Reviews</a>
+            <a href="../blog-categories/storytime.html">Storytime</a>
+            <a href="../blog-categories/photo-history.html">History of the photo</a>
+        </div>
+        </div>
+
+        <a href="../resources.html">Resources</a>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <main id="postsContainer" data-category="reviews">
+        <div id="postsList" class="posts-list">
+            <!-- wpisy wyrenderowane przez js -->
+        </div>
+        </main>
+    </div>
+
+    </div>
+
+    <footer>copyright© 2026 SaZiemniaczki • powered by stubbornness and free will</footer>
+</div>
+
+<!-- IMAGE MODAL -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage" alt="">
+</div>
+
+<script src="../js/main.js"></script>
+<script src="../js/blog.js"></script>
+</body>
+</html>

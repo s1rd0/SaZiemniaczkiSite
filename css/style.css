@@ -1,0 +1,249 @@
+/* ================= GLOBAL ================= */
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: url("../images/grass.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================= CONTAINER ================= */
+
+.container {
+    max-width: 1100px;
+    width: 95%;
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 0 40px rgba(0,255,0,0.6);
+}
+
+/* ================= HEADER ================= */
+
+header {
+    padding: 20px;
+    background: linear-gradient(to bottom, #3cff00, #0a4d00);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: inset 0 0 20px rgba(255,255,255,0.3);
+}
+
+#mainTitle {
+    margin: 0;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* ================= LAYOUT ================= */
+
+.layout {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    width: 200px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to bottom, #2c2c2c, #000);
+    margin: 6px 0;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 
+        background 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+.sidebar a:hover {
+    background: linear-gradient(to bottom, #00ff66, #006622);
+    transform: translateX(5px);
+    box-shadow: 0 0 12px rgba(0,255,120,0.6);
+}
+
+.sidebar a.active {
+    background: linear-gradient(to bottom, #00ff66, #006622);
+    box-shadow: 0 0 18px rgba(0,255,120,0.9);
+    color: #00ff88;
+}
+
+.sidebar a.active:hover {
+    transform: translateX(5px);
+}
+
+/* ================= BLOG SUBMENU ================= */
+
+.blog-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-sub {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.blog-wrapper.open .blog-sub {
+    max-height: 300px;
+}
+
+.blog-sub a {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: rgba(14, 114, 66, 0.63);
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.blog-sub a:hover {
+    transform: translateX(8px);
+    background: rgba(0, 200, 100, 0.15);
+}
+
+/* ================= DOG ================= */
+
+#dogImage {
+    width: 250px;
+    margin: 20px 0;
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+    /* glow po konturze */
+    filter:
+        drop-shadow(0 0 10px #00ff66)
+        drop-shadow(0 0 20px #00ff66)
+        drop-shadow(0 0 35px rgba(0,255,100,0.7));
+}
+
+#dogImage:hover {
+    transform: rotate(-5deg) scale(1.05);
+    filter:
+        drop-shadow(0 0 15px #00ff88)
+        drop-shadow(0 0 30px #00ff88)
+        drop-shadow(0 0 50px rgba(0,255,150,0.9));
+}
+
+/* ================= CONTENT ================= */
+
+.content {
+    flex: 1;
+}
+
+.blog-post-content {
+    max-width: 850px;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+    align-items: start;
+}
+
+.gallery-grid {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* ================= MODAL ================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 60%;
+    max-height: 80%;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0,255,0,0.8);
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sidebar a {
+        flex: 1 1 120px;
+        margin: 5px;
+    }
+}
